@@ -9,7 +9,7 @@ export const CategoryCard = ({ name, image }: Props) => {
   return (
     <Link to={`/category/${name}`}>
       <button type='button'>
-        <img src={image} alt={`${name} thumb`} className='h-20 w-20 rounded-full' />
+        <img src={image} alt={`${name} thumb`} className='h-32 w-32 rounded-full' />
         <p>{name}</p>
       </button>
     </Link>

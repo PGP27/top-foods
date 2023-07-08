@@ -23,7 +23,7 @@ export const AreaCard = ({ name }: Props) => {
         <img
           src={areaFirstFoodImage.strMealThumb}
           alt={`${areaFirstFoodImage.strMeal} thumb`}
-          className='h-20 w-20 rounded-full'
+          className='h-32 w-32 rounded-full'
         />
         <p>{name}</p>
       </button>
