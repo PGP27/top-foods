@@ -1,4 +1,4 @@
-import { AreaCard } from './AreaCard';
-import { CategoryCard } from './CategoryCard';
+import { Header } from './Header';
+import { HomeCard } from './HomeCard';
 
-export { AreaCard, CategoryCard };
+export { Header, HomeCard };

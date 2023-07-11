@@ -1,6 +1,5 @@
-import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
-import { AreaCard, CategoryCard } from '~/components';
+import { Header, HomeCard } from '~/components';
 import { foodAreas, foodCategories } from '~/services';
 
 export const Home = () => {
@@ -22,27 +21,18 @@ export const Home = () => {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='max-w-7xl'>
-        <div className='flex items-center'>
-          <h1>Top Foods</h1>
-          <div className='flex items-center relative'>
-            <input
-              type='text'
-              className='w-full outline-none py-1 px-2 transition rounded border bg-gray-100 focus:bg-gray-50 focus:border-gray-500'
-            />
-            <MagnifyingGlass className='absolute left-2' />
-          </div>
-        </div>
-        <h2 className='text-3xl'>Categories</h2>
-        <div className='w-fit grid grid-cols-7'>
+      <div className='w-full max-w-7xl'>
+        <Header />
+        <h2 className='text-3xl py-4'>Categories</h2>
+        <div className='w-full grid grid-cols-7 gap-8 py-6 border-t'>
           {categories.map(({ idCategory, strCategory, strCategoryThumb }: any) => {
-            return <CategoryCard key={idCategory} name={strCategory} image={strCategoryThumb} />;
+            return <HomeCard key={idCategory} name={strCategory} image={strCategoryThumb} />;
           })}
         </div>
-        <h2 className='text-3xl'>Areas</h2>
-        <div>
+        <h2 className='text-3xl mt-10'>Areas</h2>
+        <div className='w-full grid grid-cols-7 gap-8 py-6 border-t'>
           {areas.map(({ strArea }: any) => {
-            return <AreaCard key={strArea} name={strArea} />;
+            return <HomeCard key={strArea} name={strArea} />;
           })}
         </div>
       </div>
